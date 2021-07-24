@@ -1,0 +1,39 @@
+@import "../variables";
+
+
+table {
+  p {
+    color: $white;
+    transition: all .2s linear;
+  }
+
+  tr {
+
+    th {
+      padding: 0 0;
+    }
+
+    td {
+      border: 1px solid $main-border;
+      text-align: center;
+      padding: 1rem;
+    }
+
+  }
+}
+
+@media (max-width: 550px) {
+  table {
+    p {
+      font-size: .8rem;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  table {
+    p {
+      font-size: .55rem;
+    }
+  }
+}
