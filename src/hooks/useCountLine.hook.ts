@@ -11,7 +11,6 @@ export const useCountLine = () => {
     // so you should strip the string and leave everything you need, additionally removing the dash with spaces
     const getCountWord = useCallback((str: string) => {
         const newStr = deburr(str)
-        console.log(str.normalize('NFD'))
         return newStr.normalize('NFD').replace(/\s-\s/gi, ' ').replace(/[^-,/a-zа-яёі\s\d+−–—]/gi, '').match(/[-a-zа-яёі\d+]+/gi)?.length
 
     }, [])

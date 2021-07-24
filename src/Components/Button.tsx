@@ -4,11 +4,10 @@ import classNames from "classnames";
 interface Props {
     className: string,
     onClick?: () => void,
-    disabled?: boolean,
     children: React.ReactNode
 }
 
-function Button({className, onClick, disabled, children}: Props) {
+function Button({className, onClick, children}: Props) {
 
     const classes = classNames(
         'button',
@@ -20,7 +19,6 @@ function Button({className, onClick, disabled, children}: Props) {
             <button
                 className={classes}
                 onClick={onClick}
-                disabled={disabled}
             >
                 {children}
             </button>

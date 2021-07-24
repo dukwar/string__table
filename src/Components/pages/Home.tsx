@@ -10,15 +10,23 @@ function Home() {
 
     return (
         <section className="container">
+            {lines.length > 0 &&
             <table>
+                <thead>
                 <tr>
                     <th><p>#</p></th>
                     <th><p>Текст</p></th>
                     <th><p>Количество слов</p></th>
                     <th><p>Количество гласных</p></th>
                 </tr>
-                {lines.map(({text}, index) => <LineItem line={text} position={index + 1} />)}
+                </thead>
+
+                <tbody>
+                {lines.map(({text}, index) => <LineItem key={`line-${index}`} line={text} position={index + 1}/>)}
+                </tbody>
             </table>
+            }
+
         </section>
 
     )
