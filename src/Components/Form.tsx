@@ -44,7 +44,6 @@ function Form() {
             const linesId = getValidHttpArray(search)
             if (linesId) getLines(request, linesId)
 
-
         }
     })
 

@@ -5,11 +5,11 @@ import deburr from "lodash/deburr";
 // custom hook useCountLine
 export const useCountLine = () => {
 
+    // 1. Using Unicode properties, we find all words in sentences
+    // 2. Words separated by a dash and some other symbols are counted as two words
     const getCountWord = useCallback((str: string) => {
-        console.log(str)
         let regexp = /[\p{Alpha}\p{M}\p{Nd}\p{Pc}\p{Join_C}]+/gui
         return str.match(regexp)?.length
-
     }, [])
 
     // 1. in this case, we use the deburr function from lodash library, the normalize method and search for a given range

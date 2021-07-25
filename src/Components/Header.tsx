@@ -19,7 +19,7 @@ function Header() {
                                 <Form/>
                             </div>
                             <div className="header__info">
-                                <p>Enter numbers from 1 to 20</p>
+                                <p>Enter numbers from 1 to 20 through "," or ";" </p>
                             </div>
                         </div>
                     </div>

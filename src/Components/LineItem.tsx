@@ -7,9 +7,7 @@ const LineItem = React.memo(({line, position}:LineItemType) => {
 
     const {getCountWord, getCountVowels} = useCountLine()
     const wordCount = getCountWord(line)
-    console.log(wordCount)
     const vowelsCount = getCountVowels(line)
-    console.log(vowelsCount)
 
     return (
         <tr>

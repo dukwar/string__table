@@ -7,7 +7,6 @@ function Home() {
 
     const lines = useTypesSelector(({line}) => line.lines)
 
-
     return (
         <section className="container">
             {lines.length > 0 &&
