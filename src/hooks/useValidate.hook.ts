@@ -9,7 +9,7 @@ export const useValidate = () => {
 
         const newStr = str.replace(/\s/g, '').split(/,|;/)
         const index = newStr.indexOf('')
-        index > -1 && newStr.splice(index,1)
+        index > -1 && newStr.splice(index, 1)
         return newStr && newStr.map((item) => Number(item)).some((item) => item < 1 || item > 20 || isNaN(item))
 
     }, [])

@@ -14,13 +14,12 @@ export const useCountLine = () => {
 
     // 1. in this case, we use the deburr function from lodash library, the normalize method and search for a given range
     // 2. remove the "й" since the normalize method cuts off all symbols and the letter turns into the letter "и"
+    // 3. it would be possible to save all vowels in one array and then check, but this solution seems to me more universal and not large
     const getCountVowels = useCallback((str: string) => {
         const newStr = str.replace(/й/gi, '')
         const newStrUnDiacritics = deburr(newStr)
         return newStrUnDiacritics.normalize('NFD').match(/[aeiouауоыиэяюёеі]/gi)?.length
     }, [])
-
     return {getCountWord, getCountVowels}
-
 }
 
